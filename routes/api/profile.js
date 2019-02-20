@@ -291,8 +291,10 @@ router.delete(
   (req, res) => {
     Profile.findOneAndDelete({ user: req.user.id })
       .then(profile => {
-        User.findOneAndDelete({ _id: req.user.id }).then(() =>
-          res.json({ success: `user ${profile.handle} deleted` })
+        User.findOneAndDelete({ _id: req.user.id }).then(user =>
+          res.json({
+            success: `User: ${user.name}, Profile: ${profile.handle}, Deleted`
+          })
         );
       })
       .catch(err => res.status(404).json(err));
