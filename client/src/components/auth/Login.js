@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import classnames from "classnames";
 import { connect } from "react-redux";
 import "./layout.scss";
 import { loginUser } from "../../store/actions/authActions";
 import TextFieldGroup from "../common/TextFieldGroup";
-import { GET_ERRORS } from "../../store/actions/types";
 
 class Login extends Component {
   constructor() {
