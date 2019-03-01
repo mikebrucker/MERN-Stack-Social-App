@@ -10,6 +10,7 @@ import Spinner from "../common/Spinner";
 import ProfileActions from "./ProfileActions";
 import Experience from "./Experience";
 import Education from "./Education";
+import "./Dashboard.scss";
 
 class Dashboard extends Component {
   componentDidMount() {
